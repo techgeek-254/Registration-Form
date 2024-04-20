@@ -26,8 +26,8 @@
 	else 
 	{
 
-		$stmt = $conn->prepare("insert into registration(firstName, lastName, email, mediaHouse, mobileNumber, mckNumber, designation) values(?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("ssssiis", $firstName, $lastName, $email, $mediaHouse, $mobileNumber, $mckNumber, $designation);
+		$stmt = $conn->prepare("INSERT INTO registration(firstName, lastName, email, mediaHouse, mobileNumber, mckNumber, designation) VALUES (?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("ssssiss", $firstName, $lastName, $email, $mediaHouse, $mobileNumber, $mckNumber, $designation);
 		$execval = $stmt->execute();
 		//echo $execval;
 		
